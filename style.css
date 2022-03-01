@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  user-select: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  font-family: 'Poppins';
+
+  color: rgb(165, 165, 165);
+  background: linear-gradient(-45deg,rgb(242, 186, 33), rgb(233, 64, 87), rgb(159, 41, 180), rgb(20, 228, 255));
+  background-size: 400%, 400%;
+  animation: wave-background 10s ease infinite;
+}
+
+@keyframes wave-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* window frame */
+.window-frame {
+  margin: auto;
+  overflow: hidden;
+
+  background-color: rgb(253, 249, 252);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
+  border: solid 0.1rem rgba(110, 110, 110, 0.5);
+
+  border-radius: 1rem;
+}
+
+/* title bar */
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: rgb(232, 228, 229);
+  border-bottom: solid 0.14rem rgb(224, 224, 224);
+
+  padding: 0.6rem 1rem;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+}
+
+.dots span {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-left: 0.6rem;
+
+  border-radius: 50%;
+  border: solid 0.14rem rgba(0, 0, 0, 0.1);
+}
+
+.dots span:nth-child(1) { background-color: #14ca3a;}
+.dots span:nth-child(2) { background-color: #ffbf01;}
+.dots span:nth-child(3) { background-color: #fe6152;}
+
+/* window body */
+.window-body {
+  padding: 6rem 10rem;
+}
